@@ -1,0 +1,181 @@
+<html>
+<head>
+<title></title>
+<link href="csss.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+	function answer() {
+		document.getElementById("question1a").checked=true;
+		document.getElementById("question2b").checked=true;
+		document.getElementById("question3b").checked=true;
+		document.getElementById("question4c").checked=true;
+		document.getElementById("question5b").checked=true;
+		document.getElementById("question6d").checked=true;
+		document.getElementById("question7d").checked=true;
+		document.getElementById('correct1').style.color="00c300";
+		document.getElementById('correct2').style.color="00c300";
+		document.getElementById('correct3').style.color="00c300";
+		document.getElementById('correct4').style.color="00c300";
+		document.getElementById('correct5').style.color="00c300";
+		document.getElementById('correct6').style.color="00c300";
+		document.getElementById('correct7').style.color="00c300";
+		
+		// var answer1="operation code";
+		// var answer2="1";
+		// var answer3="linking loader";
+		// var answer4="a program in execution";
+		// var answer5="Utility program";
+		// var answer6="allows processes to synchronize activity";
+		// var answer7="becoming more common";
+		// document.write("1."+answer1);
+		// document.write("2."+answer2);
+		// document.write("3."+answer3);
+		// document.write("4."+answer4);
+		// document.write("5."+answer5);
+		// document.write("6."+answer6);
+		// document.write("7."+answer7);
+	}
+
+function check(){
+var question1=document.quiz.question1.value;
+
+var question2=document.quiz.question2.value;
+
+var question3=document.quiz.question3.value;
+
+var question4=document.quiz.question4.value;
+
+var question5=document.quiz.question5.value;
+
+var question6=document.quiz.question6.value;
+
+var question7=document.quiz.question7.value;
+var correct=0;
+if(question1=="Operation code"){
+correct++;
+}
+if(question2=="1"){
+correct++;
+}if(question3=="linking loader"){
+correct++;
+}if(question4=="a program in execution"){
+correct++;
+}if(question5=="Utility program"){
+correct++;
+}if(question6=="allows processes to synchronize activity"){
+correct++;
+}if(question7=="becoming more common"){
+correct++;
+}
+
+var messages=["well Done!!","Just okay" ,"Really need improvement"];
+var range;
+if(correct>6)
+{
+range=0;
+}
+if(correct>2&&correct<=5)
+{
+range=1;
+}
+if(correct<3)
+{
+range=2;
+}
+document.getElementById("after_submit").style.visibility="visible";
+
+
+document.getElementById("messages").innerHTML=messages[range];
+
+document.getElementById("number_correct").innerHTML="You got " + correct +" correct answer ";
+document.getElementById("button1").style.visibility="visible";
+}
+function erase(){
+alert("You choose to retake the quiz");
+document.getElementById("after_submit").style.visibility="hidden";
+location.reload();
+}
+
+
+</script>
+</head>
+<!-- <style type="text/css">
+
+.correct_ans{
+	font-weight: bold;
+	color: green;
+}	
+
+</style>
+ -->
+<body>
+<ol>
+<li>
+The part of machine level instruction, which tells the central processor what has to be done, is</li>
+<form name="quiz" id="quiz">
+<input type="radio" id="question1a" value="Operation code" name="question1"><div style="display: inline;" id="correct1">Operation code</div><br>
+<input type="radio" id="question1b" value="Address" name="question1">Address<br>
+<input type="radio" id="question1c" value="Locator" name="question1">Locator<br>
+<input type="radio" id="question1d" value="None of the above" name="question1">None of the above
+
+<li>
+	
+To avoid the race condition, the number of processes that may be simultaneously inside their critical section is</li>
+<input type="radio" id="question2a" value="8" name="question2">8<br>
+<input type="radio" id="question2b" value="1" name="question2"><div style="display: inline;" id="correct2">1</div><br>
+<input type="radio" id="question2c" value="16" name="question2">16<br>
+<input type="radio" id="question2d" value="0" name="question2">0
+
+
+<li>
+ 
+  	
+A system program that combines the separately compiled modules of a program into a form suitable for execution</li>
+<input type="radio" id="question3a" value="assembler" name="question3">assembler<br>
+<input type="radio" id="question3b" value="linking loader" name="question3"><div style="display: inline;" id="correct3">linking loader</div><br>
+<input type="radio" id="question3c" value="cross compiler" name="question3">cross compiler<br>
+<input type="radio" id="question3d" value="None of the above" name="question3">None of the above
+
+
+
+
+<li>
+ Process is</li>
+<input type="radio" id="question4a" value="program in High level language kept on disk" name="question4">program in High level language kept on disk<br>
+<input type="radio" id="question4b" value="contents of main memory" name="question4">contents of main memory<br>
+<input type="radio" id="question4c" value="a program in execution" name="question4"><div style="display: inline;" id="correct4">a program in execution</div><br>
+<input type="radio" id="question4d" value="a job in secondary memory" name="question4">a job in secondary memory
+
+<li>
+	
+Which of the following systems software does the job of merging the records from two files into one?</li>
+<input type="radio" id="question5a" value="Security software" name="question5">Security software<br>
+<input type="radio" id="question5b" value="Utility program" name="question5"><div style="display: inline;" id="correct5">Utility program</div><br>
+<input type="radio" id="question5c" value="Networking software" name="question5">Networking software<br>
+<input type="radio" id="question5d" value="Documentation system" name="question5">Documentation system
+
+<li>
+ 	
+Interprocess communication</li>
+<input type="radio" id="question6a" value="is required for all processes" name="question6">is required for all processes<br>
+<input type="radio" id="question6b" value="is usually done via disk drives" name="question6">is usually done via disk drives<br>
+<input type="radio" id="question6c" value="is never necessary" name="question6">is never necessary<br>
+<input type="radio" id="question6d" value="allows processes to synchronize activity" name="question6"><div style="display: inline;" id="correct6">allows processes to synchronize activity</div>
+
+
+<li>
+User-Friendly Systems are:</li>
+<input type="radio" id="question7a" value="required for object-oriented programming" name="question7">required for object-oriented programming<br>
+<input type="radio" id="question7b" value="easy to develop" name="question7">easy to develop<br>
+<input type="radio" id="question7c" value="common among traditional mainframe operating systems" name="question7">common among traditional mainframe operating systems<br>
+<input type="radio" id="question7d" value="becoming more common" name="question7"><div style="display: inline;" id="correct7">becoming more common</div><br><br><br>
+
+	<input id="button" type="button" value="i m done" onclick="check();">
+<input id="button1" type="reset" value="Restart quiz" onclick="erase();">
+<input id="button2" type="button" value="show answer" onclick="answer();">
+</ol>
+<div id="after_submit">
+<p id="messages"></p>
+<p id="number_correct"></p>
+</div>
+
+</body>

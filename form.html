@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login form validation</title>
+<head>
+<body align="center">
+<h1>Login Form</h1>
+<h3>
+	<form name="Login" onSubmit="return v()">
+		UserName :<input type="text" name="UName" value=""><br>
+		Password :<input type="Password" name="Pass" value=""><br>
+		<input type="submit" name="btn" value="submit">
+	</form>
+</h3>
+<script type="text/javascript">
+	function v() {
+		var UName = document.Login.UName.value;
+	    var Pass = document.Login.Pass.value;
+	    if(UName=="" || Pass=="")
+	    {
+	    	alert("both fields are necessary to filled");
+	    	return;
+	    }
+	    if(Pass.length<6 || Pass.length>12)
+	     {
+	     	alert("Password must be 6 to 12 characters");
+	     	return;
+	     }
+	     //username should not start with _,@ and number
+	      var str=UName.slice(0,1);
+	      if(UName.slice(0,1)=="_"||(UName.slice(0,1)=="@"||str.match(/[0-9]/g) !=null)
+	      {
+	      	alert("username should not start with _,@ and number");
+	      	return;
+	      }
+	}
+</script>
+</body>
+</html>

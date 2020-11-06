@@ -1,0 +1,28 @@
+body
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 5px solid grey;
+  padding: 50px;
+  margin: 2px;
+  position: absolute;
+ left: 400px;
+ top: 75px;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 3px 2px;
+  cursor: pointer;
+}
+.h4{
+	color: black;
+	display:inline-flex;
+	top: 7000px;
+}

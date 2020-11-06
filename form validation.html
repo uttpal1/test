@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="home.css"></head>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script type="text/javascript">
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  var y = document.forms["myForm"]["lname"].value;
+  var z = document.forms["myForm"]["uname"].value;
+  var a = document.forms["myForm"]["upass"].value;
+  var b = document.forms["myForm"]["DOB"].value;
+  if (x == "" || y == "" || z =="" || a =="" || b =="") {
+    alert("no field should be empty");
+    return false;
+  }
+  if (a.length<6 || a.length>12) {
+  	alert("Password must be 6 to 12 characters ");
+  	return false;
+  }
+  var str=z.slice(0,1);
+  if (z.slice(0,1)=="_" || z.slice(0,1)=="@" || str.match(/[0-9]/g)!=null ) {
+  	alert("UserName should not start with _,@ and number");
+  	return false;
+  }
+}
+</script>
+</head>
+<body align=center>
+<div class="">
+  <i class='fab fa-btc'></i>
+  <h4>Please fill the form to sign up</h4>
+<form name="myForm" action="file:///C:/Users/Utpal/Desktop/website/login%20form.html" onsubmit="return validateForm()" method="post">
+  FirstName: <input type="text" name="fname" placeholder="FirstName"><br><br>
+  LastName: <input type="text" name="lname" placeholder="LastName"><br><br>
+  UserName: <input type="text" name="uname" placeholder="UserName"><br><br>
+  Password: <input type="Password" name="upass" placeholder="Password"><br><br>
+  DOB: <input type="date" name="DOB"><br><br>
+  <button class="button" value="Submit">Sign Up</button>
+</form>
+</div>
+<marquee>
+<h4 class="h4">no field should be empty</h4><br>
+<h4 class="h4">username should not start with _ ,@ and number</h4><br>
+<h4 class="h4"> password lenght should be between 6-12</h4>
+</marquee>
+</body>
+</html>
